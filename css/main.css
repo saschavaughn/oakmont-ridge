@@ -22,11 +22,12 @@ NAVIGATION BAR
     display: block;
     overflow: hidden;
     list-style: none;
-    background: #004d40; /* For browsers that do not support gradients*/
-    background: -webkit-linear-gradient(left, #004d40, #3e2723); /* For Safari 5.1 to 6*/
-    background: -o-linear-gradient(right, #004d40, #3e2723); /* For Opera 11.1 to 12.0*/
-    background: -moz-linear-gradient(right, #004d40, #3e2723); /* For Firefox 3.6 to 15*/
-    background: linear-gradient(to right, #004d40, #3e2723); /* Standard syntax */
+    background: #fff;
+    /*background: #004d40; /* For browsers that do not support gradients*/
+    /*background: -webkit-linear-gradient(left, #004d40, #3e2723); /* For Safari 5.1 to 6*/
+    /*background: -o-linear-gradient(right, #004d40, #3e2723); /* For Opera 11.1 to 12.0*/
+    /*background: -moz-linear-gradient(right, #004d40, #3e2723); /* For Firefox 3.6 to 15*/
+    /*background: linear-gradient(to right, #004d40, #3e2723); /* Standard syntax */
     margin: 0 auto;
     padding: 2px 0 0;
     border: none;
@@ -39,7 +40,8 @@ NAVIGATION BAR
     font-size: 17px;
 }
 .navbar ul li a {
-    color: white;
+    color: #004d40;
+    text-transform: uppercase;
 }
 
 .navbar-icons-left {
@@ -89,7 +91,7 @@ PARALLAX HEADER
     right: 0px;
     margin: 0 auto;
     padding: 10px 0 0 0;
-    background-image: url('../img/holding-hands-parallax-header.jpg');
+    background-image: url('../img/header.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -97,8 +99,9 @@ PARALLAX HEADER
 }
 #parallax-header .overlay {
     background-color: rgba(62, 69, 81, 0.3);
+    max-width: 100%;
     height: 550px;
-    margin: -10px;
+    margin: -10px 0;
     padding-top: 10px;
     z-index: 2;
 }
@@ -106,8 +109,7 @@ PARALLAX HEADER
 #parallax-header #logo {
     display: block;
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 0px;
+    margin-top: 150px;
     z-index: 3; !important
 }
 
@@ -127,8 +129,13 @@ PARALLAX HEADER
     padding: 0px 150px; 
 }
 @media screen and (max-width: 600px) {
+    #parallax-header {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
     #parallax-header #logo {
-        margin-top: 70px;
+        margin-top: 100px;
     }
     #parallax-header h1 {
         font-size: 22px;
@@ -140,8 +147,37 @@ PARALLAX HEADER
 
 @media screen and (max-width: 900) {
     #parallax-header p {
-        padding: 0px 40px;
+        padding: 0px 20px;
     }
+}
+#header-button {
+    max-width: 50%;
+    text-align: center;
+    background: #60c260;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 30px 10px;
+    box-shadow: 0px 4px 9.48px 2.52px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+#header-button:hover {
+    text-decoration: none;
+    background: #4f9f4f;
+    color: #fff;
+}
+
+#join-button {
+    background: #33A1FD;
+    text-transform: uppercase;
+    padding: 10px;
+    box-shadow: 0px 4px 9.48px 2.52px rgba(0, 0, 0, 0.2);
+    color: #fff; 
+}
+
+#join-button:hover {
+    text-decoration: none;
+    background: #2176FF;
+    color: #fff;
 }
 /*****************************************************************
 FIND OFFICE NEAR YOU
@@ -168,18 +204,44 @@ VISION
     }
 
 #vision {
-    text-align: center;
-}
-
-#vision img {
-    margin: 30px auto 0;
+    text-align: left;
 }
 
 #vision h3 {
-    margin: 0 auto 30px;
-    text-align: center;
+    margin: 20px auto 20px;
+    text-align: left;
     font-weight: normal;
     font-family: 'PT Serif', serif;
     font-size: 26px;
     color: #004d40;
+}
+
+#quality {
+    text-align: left;
+    max-width: 50%;
+}
+
+#quality-photo {
+    padding: 0 30px 0 40px;
+}
+#dedication {
+    text-align: right;
+    max-width: 50%;
+}
+#dedication h3 {
+    text-align: right;
+}
+#dedicated-photo {
+    display: inline-block;
+}
+
+.column {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin: 10px;
+}
+
+#lorem {
+    float: right;
 }
